@@ -30,12 +30,12 @@ const config = {
     autodocs: true,
   },
 
-  viteFinal: (config, { configType }) => {
+  viteFinal: (viteConfig, { configType }) => {
     if (configType === "PRODUCTION") {
-      config.base = "/05-design-system/";
+      viteConfig.base = "/05-design-system/";
     }
 
-    return config;
+    return viteConfig;
   },
 };
 export default config;
