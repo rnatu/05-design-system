@@ -1,5 +1,5 @@
 import { join, dirname } from "path";
-import { config } from "process";
+import { config } from "process"; // Importando config do módulo process
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -10,7 +10,7 @@ function getAbsolutePath(value) {
 }
 
 /** @type { import('@storybook/react-vite').StorybookConfig } */
-const config = {
+const storybookConfig = {
   stories: [
     "../src/pages/**/*.mdx",
     "../src/stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
@@ -38,4 +38,4 @@ const config = {
     return viteConfig;
   },
 };
-export default config;
+export default storybookConfig;
